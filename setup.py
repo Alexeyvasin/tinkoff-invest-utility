@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="tinkoff-invest-utility",  # Name of your library
+    name="tinkoff_invest_utility",  # Name of your library
     version="0.1",
     packages=find_packages(),  # Automatically find your packages
     install_requires=['tinkoff-investments', 'asyncio'],  # List of dependencies (if any)
