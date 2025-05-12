@@ -9,10 +9,8 @@ async def get_instrument(token, ticker):
         futures = await asyncio.gather(futures_task)
 
     instruments = futures[0].instruments
-    # print(type(instruments[0]))
 
     for instrument in instruments:
         if instrument.ticker == ticker:
             return instrument
-        return None
     return None
