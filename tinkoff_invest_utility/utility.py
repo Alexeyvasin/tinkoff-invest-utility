@@ -2,7 +2,7 @@
 import asyncio
 from tinkoff.invest import AsyncClient
 
-async def get_itstrument(token, tiker):
+async def get_instrument(token, ticker):
     
     async with AsyncClient(token) as client:
         futures_task = client.instruments.futures()
@@ -12,5 +12,7 @@ async def get_itstrument(token, tiker):
     # print(type(instruments[0]))
 
     for instrument in instruments:
-        if instrument.ticker == tiker:
+        if instrument.ticker == ticker:
             return instrument
+        return None
+    return None
